@@ -6,7 +6,6 @@ export const ThemeToggleButton = () => {
   const { theme, setTheme } = useTheme();
 
   const toggle = () => {
-    console.log("theme", theme);
     if (theme === "dark") {
       setTheme("light");
     } else {
