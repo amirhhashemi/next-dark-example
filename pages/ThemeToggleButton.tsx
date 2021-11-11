@@ -4,7 +4,9 @@ import { SunIcon } from "./SunIcon";
 
 export const ThemeToggleButton = () => {
   const { theme, setTheme } = useTheme();
+
   const toggle = () => {
+    console.log("theme", theme);
     if (theme === "dark") {
       setTheme("light");
     } else {
@@ -12,9 +14,9 @@ export const ThemeToggleButton = () => {
     }
   };
 
-  return (
-    <button onClick={toggle} className="px-3 py-2 rounded-md">
+  return theme ? (
+    <button onClick={toggle} className="mr-3">
       {theme === "dark" ? <SunIcon /> : <MoonIcon />}
     </button>
-  );
+  ) : null;
 };
