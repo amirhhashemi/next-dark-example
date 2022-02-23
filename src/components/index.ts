@@ -1,3 +1,3 @@
-export * from "./ThemeToggleButton";
+export * from "./ThemeSwitcher";
 export * from "./SunIcon";
 export * from "./MoonIcon";
